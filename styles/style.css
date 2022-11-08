@@ -49,12 +49,15 @@ table {
 
 /* MAKNA STYLE */
 
-:root {
+/* :root {
    --color1: #B1DCEC;
    --color2: #A8BAD7;
    --color3: #E9F6FA;
    --color4: #D17BB0;
    --color5: #F9FAFD;
+
+   --backgroun-color: #E9E9E9;
+   --font-color: #4E3546;
 }
 
 * {
@@ -64,7 +67,7 @@ table {
 }
 
 body {
-   background-color: var(--color3);
+   background-color: var(--backgroun-color);
 }
 
 .content {
@@ -85,4 +88,208 @@ a {
    background-color: rgba(233, 198, 219, 0.5);
    font-size: 22pt;
    border-radius: 15px;
+}
+
+.makna-logo > svg {
+   fill: var(--font-color);
+   width: 100px;
+   height: 100px;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+   margin: 0;
+   font-family: 'Helvetica';
+   color: #313346;
+}
+
+*::selection {
+   background: #F299D3;
+   color: white;
+}
+
+/* ###### HEADER ######  */
+
+li {
+   list-style: none;
+   height: 100%;
+}
+
+body {
+   background: #E9E9E9;
+}
+
+a {
+   text-decoration: none;
+}
+
+.navHeader {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   height: 80px;
+   background:#8b90c7;
+}
+
+.menu {
+   height: 100%;
+}
+
+.menu ul{
+   display: flex;
+   align-items: center;
+   height: 100%;
+}
+
+.logoHeader {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   margin-left: 15px;
+}
+
+.logoHeader svg {
+   fill: #E4EDF2;
+}
+
+.logoHeader::after {
+   content: 'lite version';
+   color: rgba(255, 255, 255, 0.5);
+   font-size: 8pt;
+   text-align: center;
+   justify-items: center;
+}
+
+.logoHeader svg:hover {
+   fill: #F299D3;
+   cursor: pointer;
+}
+
+.menu a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 15vw;
+   height: 100%;
+   color: #E4EDF2;
+}
+
+a:focus {
+   outline: none;
+}
+
+.menu a:hover {
+   background: #9198e5;
+   color: #CEEFF2;
+}
+
+/* ###### CONTEÚDO ######  */
+
+main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.logoConteudo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   fill: #BABABA;
+
+   max-width: 80vw;
+   height: 15vh;
+}
+
+.conteudo-dois {
+   width: 500px;
+   max-width: 90vw;
+}
+
+.faixas {
+   padding: 50px;
+   background: white;
+}
+
+.faixas-item {
+   display: flex;
+   height: 50px;
+   align-items: center;
+   border-left: 0 solid #9198E5;
+   transition-property: border-left;
+   transition-duration: 0.1s;
+}
+
+.faixas-item a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.faixas-item:nth-child(2n+1) {
+   background: #E9E9E9;
+}
+
+.faixas-item h3 {
+   padding-left: 20px;
+   font-size: 15pt;
+}
+
+.faixas-item h4 {
+   font-size: 11pt;
+   color: #8a8888;
+   margin-left: 5px;
+}
+
+.faixas-item:hover {
+   border-left: 6px solid #9198E5;
+}
+
+.faixas-item a:hover {
+   cursor: pointer;
+}
+
+/* ###### RODAPÉ ###### */
+
+.rodape {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: white;
+   margin-top: 15px;
+}
+
+.rodape div {
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.rodape svg {
+   margin: 15px;
+   width: 40px;
+   height: 40px;
+   fill: #9198e5;
+}
+
+.rodape svg:hover {
+   fill: #F299D3;
+   cursor: pointer;
+}
+
+.menuMobile {
+   display: none;
+   height: 40px;
+   width: 40px;
+   margin: 20px 20px 60px 0;
+}
+
+.mm_line {
+   height: 8px;
+   border-radius: 3px;
+   background-color: #ffffff;
 }
